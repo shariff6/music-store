@@ -42,4 +42,13 @@ describe(Artist) do
       expect(Artist.all).to(eq([]))
     end
   end
+  describe('.find') do
+    it('returns an artist by their id number') do
+      test_artist = Artist.new('james')
+      test_artist.save
+      test_artist2 = Artist.new('james')
+      test_artist2.save
+      expect(Artist.find(test_artist.id)).to(eq(test_artist))
+    end
+  end
 end
