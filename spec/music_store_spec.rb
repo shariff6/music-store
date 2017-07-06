@@ -29,4 +29,11 @@ describe("CD") do
       expect(CD.all).to(eq([]))
     end
   end
+  describe("#save") do
+    it "saves the CD to the array" do
+      test_cd = CD.new("garrix", nil, 2000)
+      test_cd.save
+      expect(CD.all).to(eq([test_cd]))
+    end
+  end
 end
