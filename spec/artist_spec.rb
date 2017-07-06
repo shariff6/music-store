@@ -17,4 +17,17 @@ describe(Artist) do
       expect(test_artist.id).to(eq(1))
     end
   end
+  describe('#cds') do
+    it('checks if empty array of cds is initially returned') do
+      test_artist = Artist.new('james')
+      expect(test_artist.cds).to(eq([]))
+    end
+  end
+  describe('#save') do
+    it('adds an artist to the array of saved artists') do
+      test_artist = Artist.new('james')
+      test_artist.save
+      expect(Artist.all).to(eq([test_artist]))
+    end
+  end
 end
