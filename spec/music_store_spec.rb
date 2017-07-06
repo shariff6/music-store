@@ -50,4 +50,13 @@ describe("CD") do
       expect(test_cd.id).to(eq(1))
     end
   end
+  describe(".find") do
+    it "return a CD by its id" do
+      test_cd = CD.new("garrix", nil, 2000)
+      test_cd.save
+      test_cd2 = CD.new("martin", nil, 2000)
+      test_cd2.save
+      expect(CD.find(test_cd.id)).to(eq(test_cd))
+    end
+  end
 end
