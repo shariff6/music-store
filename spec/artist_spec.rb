@@ -51,4 +51,12 @@ describe(Artist) do
       expect(Artist.find(test_artist.id)).to(eq(test_artist))
     end
   end
+  describe('#add_cd') do
+    it('adds a new cd to an artist') do
+      test_artist = Artist.new('james')
+      test_cd = CD.new('garrix', nil, 2000)
+      test_artist.add_cd(test_cd)
+      expect(test_artist.cds).to(eq([test_cd]))
+    end
+  end
 end
