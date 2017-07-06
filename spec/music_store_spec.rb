@@ -43,4 +43,11 @@ describe("CD") do
       expect(CD.all).to(eq([]))
     end
   end
+  describe("#id") do
+    it "returns the id of the cd" do
+      test_cd = CD.new("garrix", nil, 2000)
+      test_cd.save
+      expect(test_cd.id).to(eq(1))
+    end
+  end
 end
