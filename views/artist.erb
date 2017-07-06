@@ -1,0 +1,9 @@
+<h3>Here are the CD's from this artist:</h3>
+
+  <ul>
+    <% @artist.cds().each() do |cd| %>
+      <li><a href="/cds/<%= cd.id() %>"><%= cd.name() %> <%= cd.year() %> <%= cd.image() %></a></li>
+    <% end %>
+  </ul>
+
+  <a href="/artists/<%= @artist.id%>/cds/new">Add a new cd</a>
