@@ -1,8 +1,9 @@
 class Artist
   @@artists = []
-  attr_reader :name, :id, :cds
-  def initialize(name)
+  attr_reader :name, :image, :id, :cds
+  def initialize(name, image)
     @name = name
+    @image = image
     @id = @@artists.length.+(1)
     @cds = []
   end
