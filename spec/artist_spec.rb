@@ -35,4 +35,11 @@ describe(Artist) do
       expect(Artist.all).to(eq([]))
     end
   end
+  describe('.clear') do
+    it('empties out all of the saved artists') do
+      Artist.new('james').save
+      Artist.clear
+      expect(Artist.all).to(eq([]))
+    end
+  end
 end
