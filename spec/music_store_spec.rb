@@ -24,4 +24,9 @@ describe("CD") do
       expect(test_cd.year).to(eq(2000))
     end
   end
+  describe(".all") do
+    it "is empty at first" do
+      expect(CD.all).to(eq([]))
+    end
+  end
 end
