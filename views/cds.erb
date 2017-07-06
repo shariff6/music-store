@@ -1,0 +1,11 @@
+<h1>cds</h1>
+
+<h3>Here are the cds on this lot:
+</h3>
+<ul>
+  <% @cds.each() do |cd| %>
+  <li>
+    <a href="/cds/<%= cd.id() %>"><%= cd.name() %></a>
+  </li>
+  <% end %>
+</ul>
